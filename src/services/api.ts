@@ -1,6 +1,6 @@
 import { Doctor, Hospital, Nationality, Patient } from "../types/models";
 
-const API_URL = "https://sohatey.info";
+const API_URL = "http://sohatey.info";
 
 // Helper function for API requests
 async function apiRequest<T>(
