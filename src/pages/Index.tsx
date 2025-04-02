@@ -10,7 +10,7 @@ const Index = () => {
   return (
     <Layout>
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-2">نظام بيانات صحة</h1>
+        <h1 className="text-4xl font-bold mb-2">نظام بيانات صحتي</h1>
         <p className="text-xl text-gray-600">إدارة بيانات المرضى والمستشفيات والأطباء</p>
       </div>
 
