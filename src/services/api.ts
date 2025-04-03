@@ -1,6 +1,6 @@
 import { Doctor, Hospital, Nationality, Patient } from "../types/models";
 
-const API_URL = "http://sohatey.info";
+const API_URL = "https://www.sohatey.info"; // Replace with your actual API URL
 
 // Helper function for API requests
 async function apiRequest<T>(
@@ -17,7 +17,7 @@ async function apiRequest<T>(
       "Access-Control-Allow-Headers": "Content-Type"
     },
     mode: "cors",
-    credentials: "omit"
+    credentials: "omit" 
   };
 
   if (data) {
@@ -67,7 +67,6 @@ async function downloadWithProgress(
   let receivedLength = 0;
   const chunks: Uint8Array[] = [];
 
-  // eslint-disable-next-line no-constant-condition
   while (true) {
     const { done, value } = await reader.read();
     
@@ -100,7 +99,7 @@ async function downloadWithProgress(
  
 // Patient API
 export const patientAPI = {
-  getAll: () => apiRequest<Patient[]>("/manger_data/userall"),
+  getAll: (limit: number = 100) => apiRequest<Patient[]>("/manger_data/patientsall"),
   getRecent: (limit: number = 20) => {
     console.log("Fetching recent patients from:", `${API_URL}/manger_data/user20`);
     return apiRequest<Patient[]>("/manger_data/user20");
